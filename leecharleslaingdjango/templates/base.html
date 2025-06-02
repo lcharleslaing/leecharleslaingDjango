@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <title>{% block title %}Lee Charles Laing{% endblock %}</title>
+
+  <!-- Tailwind CSS & DaisyUI via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {},
+      },
+      plugins: [daisyui],
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-base-200 font-sans">
+  {% include "core/navbar.html" %}
+  <main id="content" class="container mx-auto py-8 px-4">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  {% comment %} {% include "core/footer.html" %} {% endcomment %}
+
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>
