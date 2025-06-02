@@ -1,0 +1,20 @@
+<div class="drawer-side z-30">
+  <label for="drawer-left" class="drawer-overlay"></label>
+  <ul class="menu min-h-full w-80 bg-base-200 p-4 text-base-content">
+    <li><a href="/" onclick="closeLeftDrawer()">Home</a></li>
+    <li><a href="/music" onclick="closeLeftDrawer()">Music</a></li>
+    <li><a href="/creative" onclick="closeLeftDrawer()">Creative</a></li>
+    <li><a href="/development" onclick="closeLeftDrawer()">Development</a></li>
+    <li><a href="/about" onclick="closeLeftDrawer()">About</a></li>
+    <li><a href="/contact" onclick="closeLeftDrawer()">Contact</a></li>
+    <li><a href="/admin" onclick="closeLeftDrawer()">Admin</a></li>
+    <li><a href="/admin/music" onclick="closeLeftDrawer()">Admin (Music)</a></li>
+    <li><a href="/admin/podcasts" onclick="closeLeftDrawer()">Admin (Podcasts)</a></li>
+  </ul>
+</div>
+<script>
+  function closeLeftDrawer() {
+    const checkbox = document.getElementById('drawer-left');
+    if (checkbox) checkbox.checked = false;
+  }
+</script>

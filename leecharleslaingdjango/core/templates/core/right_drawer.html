@@ -1,0 +1,23 @@
+<div class="drawer-side z-30">
+  <label for="drawer-right" class="drawer-overlay"></label>
+  <ul class="menu min-h-full w-80 bg-base-200 p-4 text-base-content">
+    <li>
+      <a href="/profile" class="flex items-center gap-4" onclick="closeRightDrawer()">
+        <div class="avatar">
+          <div class="w-10 rounded-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Profile" />
+          </div>
+        </div>
+        <span>Profile</span>
+      </a>
+    </li>
+    <li><a href="/settings" onclick="closeRightDrawer()">Settings</a></li>
+    <li><a href="/logout" onclick="closeRightDrawer()">Logout</a></li>
+  </ul>
+</div>
+<script>
+  function closeRightDrawer() {
+    const checkbox = document.getElementById('drawer-right');
+    if (checkbox) checkbox.checked = false;
+  }
+</script>
