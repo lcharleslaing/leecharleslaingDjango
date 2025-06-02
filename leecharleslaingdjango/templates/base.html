@@ -31,8 +31,26 @@
   </main>
 
   {% include "core/footer.html" %}
+  {% include "core/music_player.html" %}
 
 
   {% block extra_scripts %}{% endblock %}
+  <script>
+    window.musicPlaylist = [
+      {
+        title: 'Sample Track',
+        artist: 'Lee Charles Laing',
+        url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+        cover: 'https://picsum.photos/500?random=1'
+      },
+      {
+        title: 'Sample Track 2',
+        artist: 'Lee Charles Laing',
+        url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+        cover: 'https://picsum.photos/500?random=2'
+      }
+    ];
+  </script>
+  <script src="{% static 'js/musicPlayer.js' %}"></script>
 </body>
 </html>
