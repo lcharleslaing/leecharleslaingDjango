@@ -1,1 +1,26 @@
 body { font-family: 'Roboto', sans-serif; }
+
+@keyframes scrollText {
+  0% { transform: translateX(0%); }
+  10% { transform: translateX(0%); }
+  60% { transform: translateX(calc(-100% + 200px)); }
+  90% { transform: translateX(0%); }
+  100% { transform: translateX(0%); }
+}
+
+.scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-text {
+  white-space: nowrap;
+  animation: scrollText 12s infinite;
+  animation-play-state: paused;
+  width: fit-content;
+}
+
+.scroll-text:hover {
+  animation-play-state: running;
+}

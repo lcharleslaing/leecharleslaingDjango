@@ -1,0 +1,128 @@
+<div id="music-player" class="fixed bottom-0 left-0 right-0 bg-base-200 shadow-lg hidden">
+  <!-- Mobile Layout -->
+  <div class="flex flex-col md:hidden">
+    <!-- Progress Bar -->
+    <button type="button" class="progress-container w-full cursor-pointer">
+      <div class="progress progress-primary h-1"></div>
+    </button>
+    <div class="flex flex-col gap-1 px-2 py-6">
+      <!-- Time Display -->
+      <div class="flex justify-between px-2 text-xs text-base-content/70">
+        <span data-current-time>0:00</span>
+        <span data-duration>0:00</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <!-- Song Info -->
+        <button type="button" class="flex-shrink-1 min-w-0 flex-1 pr-4 text-left" data-action="openFull">
+          <div class="scroll-container">
+            <div class="scroll-text text-sm font-medium" data-title>Title</div>
+          </div>
+          <div class="truncate text-xs text-base-content/70" data-artist>Artist</div>
+        </button>
+        <!-- Controls -->
+        <div class="flex items-center gap-2">
+          <button type="button" class="btn btn-ghost btn-sm" data-action="prev" aria-label="Previous song">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button type="button" class="btn btn-circle btn-primary btn-sm" data-action="togglePlay" aria-label="Play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button type="button" class="btn btn-ghost btn-sm" data-action="next" aria-label="Next song">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop Layout -->
+  <div class="hidden md:block">
+    <div class="flex flex-col">
+      <!-- Progress Bar -->
+      <button type="button" class="progress-container w-full cursor-pointer">
+        <div class="progress progress-primary h-1"></div>
+      </button>
+      <div class="flex items-center justify-between px-2 py-6">
+        <!-- Song Info -->
+        <button type="button" class="flex-shrink-1 min-w-0 flex-1 pr-2 text-left" data-action="openFull">
+          <div class="scroll-container">
+            <div class="scroll-text text-sm font-medium" data-title>Title</div>
+          </div>
+          <div class="truncate text-xs text-base-content/70" data-artist>Artist</div>
+        </button>
+        <!-- Time Display -->
+        <div class="mx-4 flex items-center gap-2 text-sm text-base-content/70">
+          <span data-current-time>0:00</span>
+          <span>/</span>
+          <span data-duration>0:00</span>
+        </div>
+        <!-- Controls -->
+        <div class="flex items-center gap-2">
+          <button type="button" class="btn btn-ghost btn-sm" data-action="prev" aria-label="Previous song">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button type="button" class="btn btn-circle btn-primary btn-sm" data-action="togglePlay" aria-label="Play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button type="button" class="btn btn-ghost btn-sm" data-action="next" aria-label="Next song">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fullscreen-player" class="fixed inset-0 z-50 hidden bg-gradient-to-b from-neutral to-base-300 text-neutral-content">
+  <div class="flex h-screen flex-col">
+    <!-- Header -->
+    <div class="flex h-16 items-center justify-between p-4">
+      <button type="button" class="btn btn-ghost" data-action="closeFull" aria-label="Close player">
+        <i class="fa-solid fa-chevron-down text-xl"></i>
+      </button>
+      <div class="text-center">
+        <h2 class="text-sm font-medium">Now Playing</h2>
+      </div>
+      <div></div>
+    </div>
+    <!-- Main Content -->
+    <div class="flex flex-1 flex-col items-center justify-center px-6">
+      <div class="flex w-full max-w-md flex-col items-center gap-4">
+        <div class="aspect-square w-full">
+          <img data-cover src="" alt="cover" class="h-full w-full rounded-lg object-cover shadow-2xl" />
+        </div>
+        <div class="w-full text-center">
+          <div class="scroll-container mb-1">
+            <div class="scroll-text text-2xl font-bold" data-title>Title</div>
+          </div>
+          <p class="text-base opacity-75" data-artist>Artist</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controls Section -->
+    <div class="w-full p-6 pb-12">
+      <!-- Progress Bar -->
+      <div class="mb-6 w-full">
+        <div class="progress-container w-full cursor-pointer">
+          <div class="progress progress-success h-1"></div>
+        </div>
+        <div class="mt-2 flex justify-between text-sm">
+          <span data-current-time>0:00</span>
+          <span data-duration>0:00</span>
+        </div>
+      </div>
+      <!-- Playback Controls -->
+      <div class="flex w-full items-center justify-between">
+        <button type="button" class="btn btn-circle btn-ghost" data-action="prev" aria-label="Previous song">
+          <i class="fa-solid fa-backward-step text-2xl"></i>
+        </button>
+        <button type="button" class="btn btn-circle btn-primary btn-lg" data-action="togglePlay" aria-label="Play">
+          <i class="fa-solid fa-play text-2xl"></i>
+        </button>
+        <button type="button" class="btn btn-circle btn-ghost" data-action="next" aria-label="Next song">
+          <i class="fa-solid fa-forward-step text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
