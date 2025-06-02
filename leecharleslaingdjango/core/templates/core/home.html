@@ -1,7 +1,68 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Welcome to Lee Charles Laing's Home Page</h1>
-  <p>This is the home page, now using Material UI via base.html.</p>
-  <md-filled-button onclick="alert('Material Button on Home!')">Material Button</md-filled-button>
+<div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1522120692334-da66e5a71e34?auto=format&fit=crop&w=1920&q=80'); background-attachment: fixed; background-position: center;">
+  <div class="hero-overlay bg-base-200/80 backdrop-blur-sm"></div>
+  <div class="hero-content text-center">
+    <div class="max-w-3xl">
+      <h1 class="mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-6xl font-bold text-transparent md:text-7xl">LEE CHARLES LAING</h1>
+      <p class="mb-8 text-2xl font-light">Music. Code. Creation.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/music" class="btn btn-primary">Listen to My Music</a>
+        <a href="/about" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 py-12">
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div class="card glass transition-transform hover:scale-105">
+      <figure class="px-6 pt-6"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Music" class="rounded-xl"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Music</h2>
+        <p>Listen to my original compositions and explore my musical journey.</p>
+        <div class="card-actions justify-end"><a href="/music" class="btn btn-primary">Listen Now</a></div>
+      </div>
+    </div>
+    <div class="card glass transition-transform hover:scale-105">
+      <figure class="px-6 pt-6"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Development" class="rounded-xl"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Development</h2>
+        <p>Check out my latest web development projects and technical work.</p>
+        <div class="card-actions justify-end"><a href="/development" class="btn btn-primary">View Projects</a></div>
+      </div>
+    </div>
+    <div class="card glass transition-transform hover:scale-105">
+      <figure class="px-6 pt-6"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" alt="Creative" class="rounded-xl"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Creative</h2>
+        <p>Explore my creative endeavors and artistic expressions.</p>
+        <div class="card-actions justify-end"><a href="/creative" class="btn btn-primary">Discover More</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 py-12">
+  <h2 class="mb-8 text-center text-3xl font-bold">My Podcasts</h2>
+  <div class="grid gap-8 md:grid-cols-2">
+    <div class="card glass">
+      <div class="card-body">
+        <h3 class="card-title">Behind The Music</h3>
+        <p>Join me as I share the stories and inspiration behind my musical compositions.</p>
+        <iframe title="Behind The Music Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/5GYwESqVFa4LKA0bsoegja?utm_source=generator" width="100%" height="352" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="card-actions justify-end"><a href="https://open.spotify.com/show/5GYwESqVFa4LKA0bsoegja" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Listen on Spotify</a></div>
+      </div>
+    </div>
+    <div class="card glass">
+      <div class="card-body">
+        <h3 class="card-title">Power Couple Marriage</h3>
+        <p>Explore relationship insights and marriage wisdom with my wife and me as we share our journey and experiences.</p>
+        <iframe title="Power Couple Marriage Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/0YGGDgkZ5EjKY2ltHOtJF9?utm_source=generator" width="100%" height="352" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="card-actions justify-end"><a href="https://open.spotify.com/show/0YGGDgkZ5EjKY2ltHOtJF9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Listen on Spotify</a></div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
